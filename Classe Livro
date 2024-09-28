@@ -1,0 +1,41 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Livro {
+    private String titulo;
+    private String isbn;
+    private List<Autor> autores;
+    private boolean disponivel;
+
+    public Livro(String titulo, String isbn) {
+        this.titulo = titulo;
+        this.isbn = isbn;
+        this.autores = new ArrayList<>();
+        this.disponivel = true;
+    }
+
+    public void adicionarAutor(Autor autor) {
+        autores.add(autor);
+    }
+
+    public void setDisponivel(boolean disponivel) {
+        this.disponivel = disponivel;
+    }
+
+    public boolean isDisponivel() {
+        return disponivel;
+    }
+
+    // Getters
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public List<Autor> getAutores() {
+        return autores;
+    }
+}
